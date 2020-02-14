@@ -75,7 +75,8 @@ def numberOfOccurence(l):
 
 #Init
 word = p[random.randint(0,len(p))]
-print(word)
+word = word.lower()
+#print(word)
 endgame = True
 error = 0
 win = 0 
@@ -95,7 +96,7 @@ while(endgame):
             GessLetter.append(l)
             win += numberOfOccurence(l)
             updateScreen(word)
-            if(win >= len(word)-1):
+            if(win >= len(word)):
                 print(word)
                 print("Your winner")#Did you get it ?
                 sys.exit(0)
