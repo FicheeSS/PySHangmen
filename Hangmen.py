@@ -86,7 +86,7 @@ updateScreen(word)
 while(endgame):
     l = input(str(error + win) + " gess ? ")
     l = l.lower()
-    if l != "" and not LetterHasBeenUse(l) and not len(l) > 1: #to be added : check for a char !int
+    if l != "" and not LetterHasBeenUse(l) and not len(l) > 1 and not l.isdecimal():
         AllLeter.append(l)
         if l not in word :
             endgame = removeLife(DEATHPOS[error])
