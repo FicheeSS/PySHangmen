@@ -86,6 +86,7 @@ while(endgame):
     l = input(str(error + win) + " gess ? ")
     l = l.lower()
     if l != "" and not LetterHasBeenUse(l) and not len(l) > 1: #to be added : check for a char !int
+        AllLeter.append(l)
         if l not in word :
             endgame = removeLife(DEATHPOS[error])
             error+=1
@@ -98,7 +99,6 @@ while(endgame):
                 print(word)
                 print("Your winner")#Did you get it ?
                 sys.exit(0)
-        AllLeter.append(l)
     if(not endgame):
         print("The correct word was : " + word)
         sys.exit(0)
