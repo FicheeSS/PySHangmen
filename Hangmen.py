@@ -26,6 +26,7 @@ try :
         p.append(s)
 except :
     print("Please make sure you have a readable doc.txt in the folder as this program and it is UTF-8 formated")
+    sys.exit(1)
 
 
 def updateScreen(word):
@@ -94,6 +95,7 @@ while(endgame):
             win += numberOfOccurence(l)
             updateScreen(word)
             if(win >= len(word)-1):
+                print(word)
                 print("Your winner")#Did you get it ?
                 sys.exit(0)
         AllLeter.append(l)
